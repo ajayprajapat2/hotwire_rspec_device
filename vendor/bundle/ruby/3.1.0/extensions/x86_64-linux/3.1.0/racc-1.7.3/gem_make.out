@@ -1,0 +1,18 @@
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+/home/arbutus23-03/.rvm/rubies/ruby-3.1.0/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-d9fz8a sitelibdir\=./.gem.20240116-19139-d9fz8a clean
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-d9fz8a sitelibdir\=./.gem.20240116-19139-d9fz8a
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-d9fz8a sitelibdir\=./.gem.20240116-19139-d9fz8a install
+/usr/bin/install -m 0755 cparse.so ./.gem.20240116-19139-d9fz8a/racc
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-d9fz8a sitelibdir\=./.gem.20240116-19139-d9fz8a clean

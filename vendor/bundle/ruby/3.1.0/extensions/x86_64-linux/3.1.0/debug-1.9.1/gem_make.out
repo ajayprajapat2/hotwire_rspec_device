@@ -1,0 +1,19 @@
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/debug-1.9.1/ext/debug
+/home/arbutus23-03/.rvm/rubies/ruby-3.1.0/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-fdtekt sitelibdir\=./.gem.20240116-19139-fdtekt clean
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-fdtekt sitelibdir\=./.gem.20240116-19139-fdtekt
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-fdtekt sitelibdir\=./.gem.20240116-19139-fdtekt install
+/usr/bin/install -m 0755 debug.so ./.gem.20240116-19139-fdtekt/debug
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/debug-1.9.1/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-fdtekt sitelibdir\=./.gem.20240116-19139-fdtekt clean

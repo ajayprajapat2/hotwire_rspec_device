@@ -1,0 +1,18 @@
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+/home/arbutus23-03/.rvm/rubies/ruby-3.1.0/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-39ehwm sitelibdir\=./.gem.20240116-19139-39ehwm clean
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-39ehwm sitelibdir\=./.gem.20240116-19139-39ehwm
+compiling stringio.c
+linking shared-object stringio.so
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-39ehwm sitelibdir\=./.gem.20240116-19139-39ehwm install
+/usr/bin/install -m 0755 stringio.so ./.gem.20240116-19139-39ehwm
+
+current directory: /home/arbutus23-03/Pictures/14nov/hotwire_rspec_device/vendor/bundle/ruby/3.1.0/gems/stringio-3.1.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20240116-19139-39ehwm sitelibdir\=./.gem.20240116-19139-39ehwm clean
