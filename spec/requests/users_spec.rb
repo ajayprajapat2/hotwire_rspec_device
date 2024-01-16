@@ -23,6 +23,10 @@ let(:valid_attributes) {
 let(:invalid_attributes) {
   { name: "", last_name: "", email: "invalid_email", contact_number: "", blood_group: "Invalid Blood Group", company_name: "" }
 }
+let(:new_attributes){
+  { name: "moarlo", last_name: "jison", email: "moarlo.jison@example.com", contact_number: "9876543210", blood_group: "1", company_name: "Company" }
+
+} 
 
   describe "GET /index" do
     it "renders a successful response" do
@@ -81,23 +85,21 @@ let(:invalid_attributes) {
         post users_url, params: { user: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
 
   describe "PATCH /update" do
     context "with valid parameters" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
-
       it "updates the requested user" do
         user = User.create! valid_attributes
         patch user_url(user), params: { user: new_attributes }
+        expect(response).to have_http_status(:found) 
+        expect(response).to redirect_to(user)
         user.reload
-        skip("Add assertions for updated state")
-      end
+        expect(user.name).to eq(new_attributes[:name])
+        expect(user.email).to eq(new_attributes[:email])
 
+      end
       it "redirects to the user" do
         user = User.create! valid_attributes
         patch user_url(user), params: { user: new_attributes }
