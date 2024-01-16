@@ -58,7 +58,8 @@ group :development do
   gem "web-console"
   gem 'rspec-rails'
   gem 'faker'
-
+  gem 'bundler-audit'
+  
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
