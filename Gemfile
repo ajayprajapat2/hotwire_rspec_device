@@ -60,6 +60,8 @@ group :development do
   gem "web-console"
   gem 'rspec-rails'
   gem 'faker'
+  gem 'factory_bot_rails'
+
 
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
@@ -68,6 +70,8 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
+gem 'devise'
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]

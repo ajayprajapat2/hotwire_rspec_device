@@ -1,32 +1,17 @@
-<div id="<%= dom_id user %>">
-  <p>
-    <strong>Name:</strong>
-    <%= user.name %>
-  </p>
+<!-- Add this HTML to your view (e.g., app/views/users/index.html.erb) -->
 
-  <p>
-    <strong>Last name:</strong>
-    <%= user.last_name %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= user.email %>
-  </p>
-
-  <p>
-    <strong>Contact number:</strong>
-    <%= user.contact_number %>
-  </p>
-
-  <p>
-    <strong>Blood group:</strong>
-    <%= user.blood_group %>
-  </p>
-
-  <p>
-    <strong>Company name:</strong>
-    <%= user.company_name %>
-  </p>
-
+<p style="color: green"><%= notice %></p>
+<div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title"><%= "#{user.name} #{user.last_name}" %></h1>
+          <p class="card-text"><strong>Email:</strong> <%= user.email %></p>
+          <p class="card-text"><strong>Contact number:</strong> <%= user.contact_number %></p>
+          <p class="card-text"><strong>Blood group:</strong> <%= user.blood_group %></p>
+          <p class="card-text"><strong>Company name:</strong> <%= user.company_name %></p>
+        </div>
+      </div>
+    </div>
 </div>
+

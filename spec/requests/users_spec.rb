@@ -17,14 +17,14 @@ RSpec.describe "/users", type: :request do
   # User. As you add validations to User, be sure to
   # adjust the attributes here as well.
 let(:valid_attributes) {
-  { name: "John", last_name: "Doe", email: "john.doe@example.com", contact_number: "123456789", blood_group: "O", company_name: "Example Company" }
+  { name: "John", last_name: "Doe", email: "john.doe@example.com", contact_number: "123456789", blood_group: "O", company_name: "Example Company", password: "123456789", password_confirmation: "123456789" }
 }
 
 let(:invalid_attributes) {
-  { name: "", last_name: "", email: "invalid_email", contact_number: "", blood_group: "Invalid Blood Group", company_name: "" }
+  { name: "", last_name: "", email: "invalid_email", contact_number: "", blood_group: "Invalid Blood Group", company_name: "", password: "123456789", password_confirmation: "123456789" }
 }
 let(:new_attributes){
-  { name: "moarlo", last_name: "jison", email: "moarlo.jison@example.com", contact_number: "9876543210", blood_group: "1", company_name: "Company" }
+  { name: "moarlo", last_name: "jison", email: "moarlo.jison@example.com", contact_number: "9876543210", blood_group: "1", company_name: "Company", password: "123456789", password_confirmation: "123456789" }
 
 } 
 
