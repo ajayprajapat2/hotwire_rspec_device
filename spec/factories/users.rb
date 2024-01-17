@@ -2,11 +2,10 @@ FactoryBot.define do
   factory :user do
     name { Faker::Name.name }
     email { Forgery::Internet.email_address }
-    name: "Name",
-    last_name: "Last Name",
-    password: "password123",   
-    contact_number: "Contact Number",
-    blood_group: "Blood Group",
-    company_name: "Company Name"
+    last_name { Faker::Name.last_name }
+    password { Faker::Internet.password }
+    contact_number { Faker::PhoneNumber.phone_number }
+    blood_group { Faker::Blood.blood_type }
+    company_name { Faker::Company.name }
   end
 end

@@ -61,8 +61,8 @@ group :development do
   gem 'rspec-rails'
   gem 'faker'
   gem 'factory_bot_rails'
-  
-
+  gem 'simplecov', require: false
+  gem 'letter_opener'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
