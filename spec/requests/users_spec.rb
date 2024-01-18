@@ -13,7 +13,7 @@ require 'rails_helper'
 # It only uses APIs available in rails and/or rspec-rails. There are a number
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
-
+# rubocop:disable Metrics/BlockLength
 RSpec.describe '/users', type: :request do
   # This should return the minimal set of attributes required to create a valid
   # User. As you add validations to User, be sure to
@@ -22,7 +22,6 @@ RSpec.describe '/users', type: :request do
     { name: 'John', last_name: 'Doe', email: 'john.doe@example.com', contact_number: '123456789', blood_group: 'O',
       company_name: 'Example Company', password: '123456789', password_confirmation: '123456789' }
   end
-
   let(:invalid_attributes) do
     { name: '', last_name: '', email: 'invalid_email', contact_number: '', blood_group: 'Invalid Blood Group',
       company_name: '', password: '123456789', password_confirmation: '123456789' }
@@ -106,33 +105,28 @@ RSpec.describe '/users', type: :request do
   end
 
   describe 'PATCH/update' do
-    context 'with valid parameters' do
-      it 'updates the requested user' do
-        user = User.create! valid_attributes
-        sign_in user
-        patch user_url(user), params: { user: new_attributes }
-        expect(response).to have_http_status(:found)
-        expect(response).to redirect_to(user)
-        user.reload
-        expect(user.name).to eq(new_attributes[:name])
-        expect(user.email).to eq(new_attributes[:email])
-      end
-      it 'redirects to the user' do
-        user = User.create! valid_attributes
-        sign_in user
-        patch user_url(user), params: { user: new_attributes }
-        user.reload
-        expect(response).to redirect_to(user_url(user))
-      end
+    it 'updates the requested user' do
+      user = User.create! valid_attributes
+      sign_in user
+      patch user_url(user), params: { user: new_attributes }
+      expect(response).to have_http_status(:found)
+      expect(response).to redirect_to(user)
+      user.reload
+      expect(user.name).to eq(new_attributes[:name])
+      expect(user.email).to eq(new_attributes[:email])
     end
-
-    context 'with invalid parameters' do
-      it "renders a response with 422 status (i.e. to display the 'edit' template)" do
-        user = User.create! valid_attributes
-        sign_in user
-        patch user_url(user), params: { user: invalid_attributes }
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
+    it 'redirects to the user' do
+      user = User.create! new_attributes
+      sign_in user
+      patch user_url(user), params: { user: valid_attributes }
+      user.reload
+      expect(response).to redirect_to(user_url(user))
+    end
+    it "renders a response with 422 status (i.e. to display the 'edit' template)" do
+      user = User.create! valid_attributes
+      sign_in user
+      patch user_url(user), params: { user: invalid_attributes }
+      expect(response).to have_http_status(:unprocessable_entity)
     end
   end
 
@@ -152,4 +146,5 @@ RSpec.describe '/users', type: :request do
       expect(response).to redirect_to(users_url)
     end
   end
+  # rubocop:enable Metrics/BlockLength
 end

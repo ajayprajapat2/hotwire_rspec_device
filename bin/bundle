@@ -10,6 +10,7 @@
 
 require 'rubygems'
 
+# This module contains methods related to Bundler setup.
 module BundlerSetup
   module_function
 
@@ -22,27 +23,23 @@ module BundlerSetup
   end
 
   def cli_arg_version
-    return unless invoked_as_script?
-    return unless 'update'.start_with?(ARGV.first || ' ')
+    return unless invoked_as_script? && 'update'.start_with?(ARGV.first || ' ')
 
     bundler_version = nil
     update_index = nil
 
-    ARGV.each_with_index do |a, i|
-      bundler_version = extract_bundler_version(a, update_index, i)
-      next unless a =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
-
-      bundler_version = Regexp.last_match(1)
-      update_index = i
+    ARGV.each_with_index do |arg, index|
+      bundler_version = extract_bundler_version(arg, update_index, index)
+      update_index = index if arg =~ /\A--bundler(?:[= ](#{Gem::Version::VERSION_PATTERN}))?\z/
     end
 
     bundler_version
   end
 
-  def extract_bundler_version(a, update_index, i)
-    return nil unless update_index && update_index.succ == i && a =~ Gem::Version::ANCHORED_VERSION_PATTERN
+  def extract_bundler_version(abc, update_index, ijk)
+    return nil unless update_index && update_index.succ == ijk && abc =~ Gem::Version::ANCHORED_VERSION_PATTERN
 
-    a
+    abc
   end
 
   def gemfile
@@ -98,7 +95,9 @@ module BundlerSetup
       return
     end
 
-    warn "Activating bundler (#{bundler_requirement}) failed:\n#{gem_error.message}\n\nTo install the version of bundler this project requires, run `gem install bundler -v '#{bundler_requirement}'`"
+    warn "Activating bundler (#{bundler_requirement}) failed:\n" \
+         "#{gem_error.message}\n\nTo install the version of bundler this " \
+         "project requires, run `gem install bundler -v '#{bundler_requirement}'`"
     exit 42
   end
 

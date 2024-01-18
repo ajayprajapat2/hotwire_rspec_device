@@ -9,6 +9,8 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module HotwireRspecDevice
+  # It inherits from Rails::Application and is responsible for configuring
+  # the application's settings and behavior.
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
